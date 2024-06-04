@@ -26,10 +26,9 @@ def get_db():
     
 db_dependency = Annotated[Session, Depends(get_db)]
 
-@router.get("/")
+@router.get("")
 def get_todos(db: db_dependency):
   todos = db.query(models.TodosTable).all()
-  print(todos)
   if not isinstance(todos, list):
     return HTTPException(status_code=404)
   
