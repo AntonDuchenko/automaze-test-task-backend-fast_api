@@ -1,13 +1,8 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from router import router as todo_router
+from database import engine
+import models
 
 app = FastAPI()
-
-class Todo(BaseModel):
-    title: str
-    completed: bool
-    priority: int
-
-@app.get("/")
-def get_todos():
-    return {"message": "Hello World"}
+app.include_router(todo_router)
+models.Base.metadata.create_all(bind=engine)
