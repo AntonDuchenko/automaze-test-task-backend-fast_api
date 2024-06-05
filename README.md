@@ -20,12 +20,15 @@ This part of the application is responsible for handling requests from the clien
 ### Running the Server
 
 1. Open the terminal.
-2. Navigate to the directory where the server-side code is located.
-3. Run the command `pip install -r requirements.txt` to install all necessary dependencies.
-4. Create a `.env` file in the root directory of your project.
-5. Add the following line to the `.env` file: `DATABASE_URL="your db_url connection"`.
-6. Open another terminal and run the command `uvicorn main:app --reload` to start the server.
-7. After a successful startup, the server will be available at [http://localhost:8000/](http://localhost:8000/).
+2. Clone the repository: `git clone https://github.com/AntonDuchenko/automaze-test-task-backend-fast-api`
+3. Navigate to the directory where the server-side code is located: `cd automaze-test-task-backend-fast-api`
+4. Create a virtual environment: `py -m venv venv`
+5. Activate the virtual environment: `source venv/Scripts/activate`
+6. Run the command `pip install -r requirements.txt` to install all necessary dependencies.
+7. Create a `.env` file in the root directory of your project.
+8. Add the following line to the `.env` file: `DATABASE_URL="your db_url connection"`.
+9. Open another terminal and run the command `uvicorn main:app --reload` to start the server.
+10. After a successful startup, the server will be available at [http://localhost:8000/](http://localhost:8000/).
 
 ### Files and Directories
 
