@@ -22,8 +22,10 @@ This part of the application is responsible for handling requests from the clien
 1. Open the terminal.
 2. Navigate to the directory where the server-side code is located.
 3. Run the command `pip install -r requirements.txt` to install all necessary dependencies.
-4. Open another terminal and run the command `uvicorn main:app --reload` to start the server.
-5. After a successful startup, the server will be available at [http://localhost:8000/](http://localhost:8000/).
+4. Create a `.env` file in the root directory of your project.
+5. Add the following line to the `.env` file: `DATABASE_URL="your db_url connection"`.
+6. Open another terminal and run the command `uvicorn main:app --reload` to start the server.
+7. After a successful startup, the server will be available at [http://localhost:8000/](http://localhost:8000/).
 
 ### Files and Directories
 
